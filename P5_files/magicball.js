@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 function magicball(magnetenabled) {
- 
+
   strokeWeight(1);
   //magnet.render();
   for (var i = 0; i <= 200; i++) {
@@ -34,7 +33,7 @@ function GravityPoint(x, y, radius, targets,strength) {
   this.radius = radius;
   this.targets = targets;
   this.strength = strength;
-  
+
   this.render = function(a, b) {
     fill(255, 255, 255);
     //ellipse(a || this.position.x, b || this.position.y, radius * 2, radius * 2);
@@ -45,17 +44,17 @@ function GravityPoint(x, y, radius, targets,strength) {
       distanceh=dist(this.position.x,this.position.y,this.targets[i].position.x,this.targets[i].position.y);
       pullforce.magnitude = .05/distanceh;
       if (distanceh == 0){pullforce.magnitude = 0;}
-      
+
       angle = Angle(this.position,this.targets[i].position);
       pullforce.vector = {
         x: pullforce.magnitude*distanceh*sin(angle),
         y: pullforce.magnitude*distanceh*cos(angle)
       }
-      
+
 
       this.targets[i].vector.x -=pullforce.vector.x;
       this.targets[i].vector.y +=pullforce.vector.y;
-      
+
       if (distanceh <= 100 && (this.targets[i].vector.x >radius ||this.targets[i].vector.x <-3.5)){this.targets[i].vector.x=this.targets[i].vector.x*0.9;}
       if (distanceh <= 100 &&  (this.targets[i].vector.y >radius ||this.targets[i].vector.y <-3.5)){this.targets[i].vector.y=this.targets[i].vector.y*0.9;}
     }
@@ -82,7 +81,7 @@ function Particle(x, y, vector) {
     this.bounce();
     this.updatePosition();
     fill(this.color)
-   
+
     ellipse(this.position.x, this.position.y, 4, 4);
   }
 
@@ -110,7 +109,7 @@ Vector.random = function() {
 
 function Angle(fixedpoint,movingpoint){
  angle = atan(abs(movingpoint.x-fixedpoint.x)/abs(movingpoint.y-fixedpoint.y));
-  
+
   if (movingpoint.x > fixedpoint.x && movingpoint.y > fixedpoint.y){
     angle = (180-angle);
   }
@@ -122,9 +121,8 @@ function Angle(fixedpoint,movingpoint){
   }
   return angle;
 }
-=======
 function magicball(magnetenabled) {
- 
+
   strokeWeight(1);
   //magnet.render();
   for (var i = 0; i <= 200; i++) {
@@ -158,7 +156,7 @@ function GravityPoint(x, y, radius, targets,strength) {
   this.radius = radius;
   this.targets = targets;
   this.strength = strength;
-  
+
   this.render = function(a, b) {
     fill(255, 255, 255);
     //ellipse(a || this.position.x, b || this.position.y, radius * 2, radius * 2);
@@ -169,17 +167,17 @@ function GravityPoint(x, y, radius, targets,strength) {
       distanceh=dist(this.position.x,this.position.y,this.targets[i].position.x,this.targets[i].position.y);
       pullforce.magnitude = .05/distanceh;
       if (distanceh == 0){pullforce.magnitude = 0;}
-      
+
       angle = Angle(this.position,this.targets[i].position);
       pullforce.vector = {
         x: pullforce.magnitude*distanceh*sin(angle),
         y: pullforce.magnitude*distanceh*cos(angle)
       }
-      
+
 
       this.targets[i].vector.x -=pullforce.vector.x;
       this.targets[i].vector.y +=pullforce.vector.y;
-      
+
       if (distanceh <= 100 && (this.targets[i].vector.x >radius ||this.targets[i].vector.x <-3.5)){this.targets[i].vector.x=this.targets[i].vector.x*0.9;}
       if (distanceh <= 100 &&  (this.targets[i].vector.y >radius ||this.targets[i].vector.y <-3.5)){this.targets[i].vector.y=this.targets[i].vector.y*0.9;}
     }
@@ -206,7 +204,7 @@ function Particle(x, y, vector) {
     this.bounce();
     this.updatePosition();
     fill(this.color)
-   
+
     ellipse(this.position.x, this.position.y, 4, 4);
   }
 
@@ -234,7 +232,7 @@ Vector.random = function() {
 
 function Angle(fixedpoint,movingpoint){
  angle = atan(abs(movingpoint.x-fixedpoint.x)/abs(movingpoint.y-fixedpoint.y));
-  
+
   if (movingpoint.x > fixedpoint.x && movingpoint.y > fixedpoint.y){
     angle = (180-angle);
   }
@@ -246,4 +244,3 @@ function Angle(fixedpoint,movingpoint){
   }
   return angle;
 }
->>>>>>> 34e6ae9ee44daade44348667cbf6f2dcbabed16e
