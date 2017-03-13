@@ -4,25 +4,51 @@ function gameplay(user,sessionid){
   image(gameskin,width/2,height/2,width,height); //spacebg
   noTint();
   magicball();
+<<<<<<< HEAD
+  var userArray;
   
   //Retrieve Game status every 5 secs
+  if (userArray !== 'undefined'){
+    setInterval(function (){
+=======
+  
+  //Retrieve Game status every 5 secs
+>>>>>>> 34e6ae9ee44daade44348667cbf6f2dcbabed16e
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function(){
       if (this.readyState == 4 && this.status == 200) {
         userArray = decode(this.responseText);
+<<<<<<< HEAD
+=======
         console.log(userArray);
+>>>>>>> 34e6ae9ee44daade44348667cbf6f2dcbabed16e
         loop();
       }
     }
     xmlhttp.open("GET","../serverfiles/getarray.php",true);
     xmlhttp.send();
     noLoop();
+<<<<<<< HEAD
+    },5000);
+  }
+    
+    if (userArray == undefined){
+      userArray=[];
+  for (var i = 0; i<=10; i++){
+    userArray[i] = [];
+    for (var j = 0; j<=8; j++){
+      userArray[i][j] = 0;
+    }
+  }
+    }
+=======
   // for (var i = 0; i<=10; i++){
   //   userArray[i] = [];
   //   for (var j = 0; j<=8; j++){
   //     userArray[i][j] = 0;
   //   }
   // }
+>>>>>>> 34e6ae9ee44daade44348667cbf6f2dcbabed16e
   
   //opponentArray = //get opponent array
     //chat = //get Chat
