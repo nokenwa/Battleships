@@ -4,35 +4,35 @@
 
 ### Baseline (4 marks)
 
-- [ ] Basic program with setup and draw
+- [x] Basic program with setup and draw
 
 ### Basic (max 2 marks)
 
-- [ ] At least 1 variable
-- [ ] At least 1 if statement
-- [ ] Several variables
+- [x] At least 1 variable
+- [x] At least 1 if statement
+- [x] Several variables
 
 ### Advanced (max 2 marks)
 
-- [ ] Nested if statements
-- [ ] Boolean variables
+- [x] Nested if statements
+- [x] Boolean variables
 - [ ] Complex boolean conditions
 
 ## Loops
 
 ### Baseline (4 marks)
 
-- [ ] Your program uses ar lease one basic loop
+- [x] Your program uses ar lease one basic loop
 
 ### Basic (max 2 marks)
 
-- [ ] Many loops
-- [ ] Nested loop
-- [ ] Using the loop variable
+- [x] Many loops
+- [x] Nested loop
+- [x] Using the loop variable
 
 ### Advanced (max 2 marks)
 
-- [ ] Non-standard loop (e.g. backwards) 
+- [ ] Non-standard loop (e.g. backwards)
 - [ ] Searching or otherwise breaking out of loops with break or return
 - [ ] While loop
 
@@ -40,17 +40,17 @@
 
 ### Baseline (4 marks)
 
-- [ ] Your program uses at least one basic array
+- [x] Your program uses at least one basic array
 
 ### Basic (max 2 marks)
 
-- [ ] Loops with arrays
+- [x] Loops with arrays
 - [ ] Functional programming (map, filter, reduce, etc)
 - [ ] Arrays of objects
 
 ### Advanced (max 2 marks)
 
-- [ ] 2D arrays
+- [x] 2D arrays
 - [ ] Random access of arrays
 - [ ] Random insertion/splicing arrays
 
@@ -58,43 +58,43 @@
 
 ### Baseline (4 marks)
 
-- [ ] Your program uses ar least one function defined by you
+- [x] Your program uses at least one function defined by you
 
 ### Basic (max 2 marks)
 
-- [ ] Most of your code is in your own functions not draw, setup etc 
-- [ ] Parameterised functions  
-- [ ] Return values
+- [x] Most of your code is in your own functions not draw, setup etc
+- [x] Parameterised functions  
+- [x] Return values
 
 ### Advanced (max 2 marks)
 
-- [ ] Anonymous functions
-- [ ] Functions that return different things depending on conditions or use conditions to return at different points in the function 
-- [ ] Passing functions as arguments
+- [x] Anonymous functions
+- [x] Functions that return different things depending on conditions or use conditions to return at different points in the function
+- [x] Passing functions as arguments
 
-## Objects/classes 
+## Objects/classes
 
 ### Baseline (4 marks)
 
-- [ ] Your program uses at least one object
+- [x] Your program uses at least one object
 
 ### Basic (max 2 marks)
 
-- [ ] Your objects have functions attached
-- [ ] Use of classes or constructors
-- [ ] Parameterised functions
+- [x] Your objects have functions attached
+- [x] Use of classes or constructors
+- [x] Parameterised functions
 
 ### Advanced (max 2 marks)
 
-- [ ] All of the functionality relating to your objects is functions attatched to the object 
-- [ ] Almost all of the functionality of the program is in objects 
+- [ ] All of the functionality relating to your objects is functions attatched to the object
+- [x] Almost all of the functionality of the program is in objects
 - [ ] A design involving many objects that interact with eachother
 
 # Bonus
 
 ## Using language features not taught
 
-- [ ] Use of some significant language features not used in the course (1 mark)
+- [x] Use of some significant language features not used in the course (1 mark)
 - [ ] Use of many advanced javascript features in highly competent and professional ways (3 marks)
 - [ ] Marco hasn't heard of half the stuff in this program (5 marks)
 
