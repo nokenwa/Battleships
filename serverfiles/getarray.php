@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <?php
 
 $server = "igor.gold.ac.uk";
@@ -26,7 +26,7 @@ while($row = mysqli_fetch_assoc($result)) {
 
 mysqli_close($connection);
 ?>
-=======
+
 <?php
 
 $server = "igor.gold.ac.uk";
@@ -54,4 +54,3 @@ while($row = mysqli_fetch_assoc($result)) {
 
 mysqli_close($connection);
 ?>
->>>>>>> 34e6ae9ee44daade44348667cbf6f2dcbabed16e

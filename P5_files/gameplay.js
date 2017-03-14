@@ -4,12 +4,9 @@ function gameplay(user,sessionid){
   image(gameskin,width/2,height/2,width,height); //spacebg
   noTint();
   magicball();
-  var userArray;
 
   //Retrieve Game status every 5 secs
   if (userArray !== 'undefined'){
-    setInterval(function (){
-
   //Retrieve Game status every 5 secs
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function(){
@@ -21,7 +18,6 @@ function gameplay(user,sessionid){
     xmlhttp.open("GET","../serverfiles/getarray.php",true);
     xmlhttp.send();
     noLoop();
-    },5000);
   }
 
     if (userArray == undefined){
@@ -33,20 +29,6 @@ function gameplay(user,sessionid){
     }
   }
     }
-  // for (var i = 0; i<=10; i++){
-  //   userArray[i] = [];
-  //   for (var j = 0; j<=8; j++){
-  //     userArray[i][j] = 0;
-  //   }
-  // }
-  
-  //opponentArray = //get opponent array
-    //chat = //get Chat
-
-
-
-
-
   //cockpit
   image(cockpit,width/2,height/2,width,height);
 
@@ -102,12 +84,11 @@ function gameplay(user,sessionid){
     strokeWeight(10);
      for (var j = 0; j<=8; j++){
        push();
-       if (userArray[i][j] == 0){stroke(0,0,200);} else
-       if (userArray[i][j] == 1){stroke(255,255,0);} else
+       if (userArray[i][j] == '0'){stroke(0,0,200);} else
+       if (userArray[i][j] == '1'){stroke(255,255,0);} else
        {stroke(255,0,0)};
        if (mouseX-width*.5 >=((-width*.25)+i*((width*.5)/10)-5) && mouseX-width*.5 <= ((-width*.25)+i*((width*.5)/10)+5) && mouseY-height*.38 >= ((-height*.25)+j*((height*.5)/8)-5) && mouseY-height*.38 <= ((-height*.25)+j*((height*.5)/8)+5))
         {stroke(255,255,255);
-          console.log("x:" + i +" y:" + j + " content: " + userArray[i][j]);
         }
       point((-width*.25)+i*((width*.5)/10),(-height*.25)+j*((height*.5)/8));
       pop();
@@ -126,7 +107,7 @@ function decode(string){
       array[i]=[]
     for (var j = 0; j<=8; j++){
       //string = '0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0'
-      array[i][j] = string.charAt(((i*18)+(j*2)));
+      array[i][j] = string.charAt(((i*18)+(j*2))+1);
     }
   }
   return array;

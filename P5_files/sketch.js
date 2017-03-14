@@ -6,6 +6,7 @@ var player = new User();
 var loginrequest = {username:'username',password:'password'};
 var dom;
 var gameskin, cockpit,radar,crest;
+var userArray;
 
 function setup() {
   createCanvas(displayWidth,displayHeight*.94);
@@ -26,7 +27,7 @@ function draw() {
 }
 
 function mousePressed() {
-  
+
   //Opening Screen Mouse Functions
   if (gamestate == openingScreen){
     if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
@@ -35,8 +36,8 @@ function mousePressed() {
       gamestate = loginScreen;
     }
   }
-  
-  
-  
-  
+
+
+
+
 }
