@@ -14,7 +14,7 @@ function setup() {
   imageMode(CENTER);
   rectMode(CENTER);
   textAlign(CENTER);
-  //assets = loader('assets/images/logospaceship.png');
+  assets = loader('assets/images/logospaceship.png');
   gameskin = loadImage('assets/images/spacebg.jpg');
   cockpit = loadImage('assets/images/battleship.png');
   radar = loadImage('assets/images/radarbg.jpg');
