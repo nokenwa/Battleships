@@ -23,7 +23,7 @@ function setup() {
 }
 
 function draw() {
-    gameplay();
+    gamestate();
 }
 
 function mousePressed() {
