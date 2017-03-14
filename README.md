@@ -1,20 +1,20 @@
-# Everwing - Term 2 Intro to Programming Project
+# Battleships - Term 2 Intro to Programming Project
 
 ## Variables & if statements
 
 ### Baseline (4 marks)
 
-- [x] Basic program with setup and draw
+- [ ] Basic program with setup and draw
 
 ### Basic (max 2 marks)
 
-- [x] At least 1 variable
-- [x] At least 1 if statement
-- [x] Several variables
+- [ ] At least 1 variable
+- [ ] At least 1 if statement
+- [ ] Several variables
 
 ### Advanced (max 2 marks)
 
-- [x] Nested if statements
+- [ ] Nested if statements
 - [ ] Boolean variables
 - [ ] Complex boolean conditions
 
@@ -22,12 +22,12 @@
 
 ### Baseline (4 marks)
 
-- [x] Your program uses ar lease one basic loop
+- [ ] Your program uses ar lease one basic loop
 
 ### Basic (max 2 marks)
 
-- [x] Many loops
-- [x] Nested loop
+- [ ] Many loops
+- [ ] Nested loop
 - [ ] Using the loop variable
 
 ### Advanced (max 2 marks)
@@ -40,17 +40,17 @@
 
 ### Baseline (4 marks)
 
-- [x] Your program uses at least one basic array
+- [ ] Your program uses at least one basic array
 
 ### Basic (max 2 marks)
 
-- [x] Loops with arrays
+- [ ] Loops with arrays
 - [ ] Functional programming (map, filter, reduce, etc)
-- [x] Arrays of objects
+- [ ] Arrays of objects
 
 ### Advanced (max 2 marks)
 
-- [x] 2D arrays
+- [ ] 2D arrays
 - [ ] Random access of arrays
 - [ ] Random insertion/splicing arrays
 
@@ -58,17 +58,17 @@
 
 ### Baseline (4 marks)
 
-- [x] Your program uses ar least one function defined by you
+- [ ] Your program uses ar least one function defined by you
 
 ### Basic (max 2 marks)
 
-- [x] Most of your code is in your own functions not draw, setup etc 
-- [x] Parameterised functions  
+- [ ] Most of your code is in your own functions not draw, setup etc 
+- [ ] Parameterised functions  
 - [ ] Return values
 
 ### Advanced (max 2 marks)
 
-- [x] Anonymous functions
+- [ ] Anonymous functions
 - [ ] Functions that return different things depending on conditions or use conditions to return at different points in the function 
 - [ ] Passing functions as arguments
 
@@ -76,18 +76,18 @@
 
 ### Baseline (4 marks)
 
-- [x] Your program uses at least one object
+- [ ] Your program uses at least one object
 
 ### Basic (max 2 marks)
 
-- [x] Your objects have functions attached
-- [x] Use of classes or constructors
+- [ ] Your objects have functions attached
+- [ ] Use of classes or constructors
 - [ ] Parameterised functions
 
 ### Advanced (max 2 marks)
 
 - [ ] All of the functionality relating to your objects is functions attatched to the object 
-- [x] Almost all of the functionality of the program is in objects 
+- [ ] Almost all of the functionality of the program is in objects 
 - [ ] A design involving many objects that interact with eachother
 
 # Bonus
