@@ -1,5 +1,4 @@
 'use strict';
-var img;
 
 // Declaring User Class defined to hold user information
 class User {
@@ -14,7 +13,7 @@ class User {
     this.opengames = [];
     this.closedgames = [];
   }
-  
+
   //Methods for profile picture
       //Load image
         loadProfilePic(){
@@ -25,8 +24,8 @@ class User {
           imageMode(CORNER);
           image(this.profilePicObject,x,y,image_width,image_height);
         }
-      
-      
-        
-  
+
+
+
+
 }

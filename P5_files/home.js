@@ -3,6 +3,11 @@ function home() {
   magicball(false);
   menu();
 
+  player.username = "dan"
+  player.wins = 10;
+  player.losses = 3;
+  player.draws = 1;
+
   //Profile Information
   player.drawProfilePic(width*.1, height*.3, 200, 200);
   push();
@@ -28,6 +33,6 @@ function home() {
   pop();
 
   //Offline Mode
-  var playOffline = new button((width*.4), height*.8,"Play Offline!", 'gameplay', 'medium', 'navigate');
+  var playOffline = new button((width*.4), height*.8,"Play Offline!", 'offline', 'medium', 'play');
   playOffline.createButton();
 }

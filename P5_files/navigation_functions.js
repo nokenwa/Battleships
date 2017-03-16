@@ -69,6 +69,7 @@ function button(xCenter, yCenter, label, target, size, type) {
       }else if (role == 'play'){
         if(this.target == 'offline'){
           console.log('begin game');
+          gamestate = gameplay;
         }
       }
     }
@@ -148,4 +149,3 @@ function icon(xCenter, yCenter, pic, label, target, size, type) {
 function hover(leftLimit, upperLimit, rightLimit, bottomLimit) {if (mouseX >= leftLimit && mouseX <= rightLimit && mouseY >= upperLimit && mouseY <= bottomLimit) {
     return true;
   } else return false;}
-

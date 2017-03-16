@@ -1,4 +1,5 @@
 function gameplay(user,sessionid){
+  imageMode(CENTER);
   background(0,0,0);
   tint(255,255,255,113);
   image(gameskin,width/2,height/2,width,height); //spacebg
