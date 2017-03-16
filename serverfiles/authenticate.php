@@ -1,3 +1,4 @@
+
 <?php
 
 $server = "igor.gold.ac.uk";
@@ -5,25 +6,31 @@ $user = "noken003";
 $authentication= "Trinity333";
 $database = "noken003_battleships";
 
-$username = $_POST["username"];
-$password = $_POST["password"];
+$username = $_GET["user"];
+$password = $_GET["password"];
 
 //Connect to server
-$connection = new mysqli($server, $user, $authentication, $database);
+  $connection = mysqli_connect($server, $user, $authentication,$database);
     //Throw Errow if it fails
-    if ($connection->connect_error) {
-      die("Failed to connect. See error: " .  $conn->connect_error);
+    if (!$connection) {
+      die("Failed to connect. See error: " .  mysqli_connect_error());
     }
 
 //Query
-$query = "SELECT " . $username . "','" . $password . "','0','0','0','0','0','0','0')";
+$passwordquery = "SELECT password FROM users WHERE username = '$username'";
+$passwordcheck = mysqli_query($connection,$passwordquery);
+while($reply = mysqli_fetch_assoc($passwordcheck)){
 
-if ($connection->query($query) === TRUE){
-  echo "New User Added";
-} else {
-  echo "Failed to add new user. Please see error: " . $query . "<br>" . $connection->error;
-}
+  if ($reply["password"] == $password){echo 'pass';}
+  else {echo 'fail';}
+};
 
-$connection->close();
-
+// if ($password == $reply["password"]){
+//   echo 'true';
+// } else echo 'fail';
+//
+//
+//
+// mysqli_close($connection);
+exit;
 ?>

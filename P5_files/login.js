@@ -49,10 +49,10 @@ function authenticate(){
     httprequest = new XMLHttpRequest();
     httprequest.onreadystatechange = function() {
        if (this.readyState == 4 && this.status == 200) {
-         reply = this.responseText;
-         console.log(reply);
-        if (this.responseText == reply){
-          player.username = 'username';
+         reply = String(this.responseText);
+         test = reply.search("pass");
+        if (test != -1){
+          player.username = loginrequest.username.elt.value;
           player.connected = true;
           $(".username").remove();
           $(".password").remove();
@@ -60,11 +60,11 @@ function authenticate(){
           console.log('nathaniel you are a genius');
           gamestate = home;
         }
+        else {console.log('LOGIN FAILED')}
       }
     };
-
-    var url = "../serverfiles/getuser.php?user=test&password=tester";
-    httprequest.open("GET",url,true);
+    console.log("../serverfiles/authenticate.php?user="+loginrequest.username.elt.value+"&password="+loginrequest.password.elt.value);
+    httprequest.open("GET","../serverfiles/authenticate.php?user="+loginrequest.username.elt.value+"&password="+loginrequest.password.elt.value,true);
     httprequest.send();
     // noLoop();
 
