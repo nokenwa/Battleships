@@ -14,6 +14,23 @@ class User {
     this.closedgames = [];
   }
 
+  //Download User Data Method, will only work if property connected is true
+  downloadUserProfile(){
+    httprequest = new XMLHttpRequest();
+    httprequest.onreadystatechange = function() {
+       if (this.readyState == 4 && this.status == 200) {
+          console.log('success')
+        }
+        else {console.log('User Data request FAILED')}
+      }
+    };
+    console.log("../serverfiles/userdata.php?user="+this.username);
+    httprequest.open("GET","../serverfiles/userdata.php?user="+this.username,true);
+    httprequest.send();
+    // noLoop();
+
+  }
+
   //Methods for profile picture
       //Load image
         loadProfilePic(){
@@ -24,6 +41,8 @@ class User {
           imageMode(CORNER);
           image(this.profilePicObject,x,y,image_width,image_height);
         }
+
+
 
 
 

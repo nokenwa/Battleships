@@ -7,7 +7,6 @@ $authentication= "Trinity333";
 $database = "noken003_battleships";
 
 $username = $_GET["user"];
-$password = $_GET["password"];
 
 //Connect to server
   $connection = mysqli_connect($server, $user, $authentication,$database);
@@ -17,14 +16,16 @@ $password = $_GET["password"];
     }
 
 //Query
-$passwordquery = "SELECT password FROM users WHERE username = '$username'";
-$passwordcheck = mysqli_query($connection,$passwordquery);
-while($reply = mysqli_fetch_assoc($passwordcheck)){
+$query = "SELECT * FROM users WHERE username = '$username'";
+$request = mysqli_query($connection,$query);
+while($reply = mysqli_fetch_assoc($request)){
 
-  if ($reply["password"] == $password){echo 'pass';}
-  else {echo 'fail';}
+  echo "username:".$reply["username"];
+  echo "wins:".$reply["wins"];
+  echo "losses:".$reply["wins"];
+  echo "draws:".$reply["wins"];
 };
 
-mysqli_close($connection);
+
 exit;
 ?>
