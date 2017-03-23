@@ -50,6 +50,7 @@ function authenticate(){
     httprequest.onreadystatechange = function() {
        if (this.readyState == 4 && this.status == 200) {
          reply = String(this.responseText);
+         console.log(reply);
          test = reply.search("pass");
         if (test != -1){
           player.username = loginrequest.username.elt.value;

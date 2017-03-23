@@ -23,13 +23,12 @@ class User {
         }
         else {console.log('User Data request FAILED')}
       }
-    };
+
     console.log("../serverfiles/userdata.php?user="+this.username);
     httprequest.open("GET","../serverfiles/userdata.php?user="+this.username,true);
     httprequest.send();
     // noLoop();
-
-  }
+    };
 
   //Methods for profile picture
       //Load image
