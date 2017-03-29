@@ -50,7 +50,6 @@ function authenticate(){
     httprequest.onreadystatechange = function() {
        if (this.readyState == 4 && this.status == 200) {
          reply = String(this.responseText);
-         console.log(reply);
          test = reply.search("pass");
         if (test != -1){
           player.username = loginrequest.username.elt.value;
@@ -58,13 +57,12 @@ function authenticate(){
           $(".username").remove();
           $(".password").remove();
           $(".button").remove();
-          console.log('nathaniel you are a genius');
+          player.downloadUserProfile();
           gamestate = home;
         }
         else {console.log('LOGIN FAILED')}
       }
     };
-    console.log("../serverfiles/authenticate.php?user="+loginrequest.username.elt.value+"&password="+loginrequest.password.elt.value);
     httprequest.open("GET","../serverfiles/authenticate.php?user="+loginrequest.username.elt.value+"&password="+loginrequest.password.elt.value,true);
     httprequest.send();
     // noLoop();

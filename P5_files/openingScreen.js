@@ -1,15 +1,14 @@
 var particles = [];
 
 var magnet = new GravityPoint(screen.width/2, screen.height*.5,3.5, particles,10);
-console.log('gravitypoint set')
-  
+
 function openingScreen(){
-  
+
   angleMode(DEGREES);
 
 
   noStroke();
-  
+
   var spaceship = assets;
   background(0,0,0);
   magicball(true);
@@ -21,5 +20,5 @@ function openingScreen(){
   text("Please Click to Enter", width/2, height*.7);
   textSize(32);
   text("Game will enter fullscreen mode once started",width/2,height*.8)
-  
+
 }

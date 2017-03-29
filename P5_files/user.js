@@ -16,12 +16,14 @@ class User {
 
   //Download User Data Method, will only work if property connected is true
   downloadUserProfile(){
+    if (this.connected == true){
     httprequest = new XMLHttpRequest();
     httprequest.onreadystatechange = function() {
        if (this.readyState == 4 && this.status == 200) {
-          console.log('success')
+          reply=this.responseText;
+          console.log(reply);
         }
-        else {console.log('User Data request FAILED')}
+        else
       }
 
     console.log("../serverfiles/userdata.php?user="+this.username);
@@ -29,6 +31,7 @@ class User {
     httprequest.send();
     // noLoop();
     };
+  }
 
   //Methods for profile picture
       //Load image
