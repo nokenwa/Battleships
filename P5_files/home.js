@@ -3,11 +3,6 @@ function home() {
   magicball(false);
   menu();
 
-  player.username = "dan"
-  player.wins = 10;
-  player.losses = 3;
-  player.draws = 1;
-
   //Profile Information
   player.drawProfilePic(width*.1, height*.3, 200, 200);
   push();

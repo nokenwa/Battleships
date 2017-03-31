@@ -21,11 +21,12 @@ $request = mysqli_query($connection,$query);
 while($reply = mysqli_fetch_assoc($request)){
 
 //Echo data as JSON Object
-  echo "{";
-  echo "username:'".$reply["username"]."',";
-  echo "wins:'".$reply["wins"]."',";
-  echo "losses:'".$reply["wins"]."',";
-  echo "draws:'".$reply["wins"]."'}";
+  echo '{';
+  echo '"username":"'.$reply["username"].'",';
+  echo '"wins":"'.$reply["wins"].'",';
+  echo '"losses":"'.$reply["losses"].'",';
+  echo '"draws":"'.$reply["draws"].'"}';
+
 };
 
 exit;

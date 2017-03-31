@@ -22,8 +22,12 @@ class User {
        if (this.readyState == 4 && this.status == 200) {
           reply=this.responseText;
           console.log(reply);
+          var userdata = JSON.parse(reply);
+          this.wins = userdata.wins;
+          this.losses = userdata.losses;
+          this.draws = userdata.draws;
+          console.log(userdata);
         }
-        else
       }
 
     console.log("../serverfiles/userdata.php?user="+this.username);
