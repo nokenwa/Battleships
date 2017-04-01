@@ -15,26 +15,28 @@ class User {
   }
 
   //Download User Data Method, will only work if property connected is true
-  downloadUserProfile(){
+  updateUserProfile(){
+    var user = this;
     if (this.connected == true){
     httprequest = new XMLHttpRequest();
     httprequest.onreadystatechange = function() {
        if (this.readyState == 4 && this.status == 200) {
           reply=this.responseText;
-          console.log(reply);
-          var userdata = JSON.parse(reply);
-          this.wins = userdata.wins;
-          this.losses = userdata.losses;
-          this.draws = userdata.draws;
-          console.log(userdata);
+          var datadownload = JSON.parse(reply);
+          user.wins = datadownload.wins;
+          user.losses = datadownload.losses;
+          user.draws = datadownload.draws;
+          loop();
         }
       }
 
-    console.log("../serverfiles/userdata.php?user="+this.username);
     httprequest.open("GET","../serverfiles/userdata.php?user="+this.username,true);
     httprequest.send();
-    // noLoop();
+    noLoop();
     };
+    this.wins = user.wins;
+    this.losses = user.losses;
+    this.draws = user.draws;
   }
 
   //Methods for profile picture

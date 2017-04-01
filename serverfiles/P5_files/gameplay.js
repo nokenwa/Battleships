@@ -4,33 +4,9 @@ function gameplay(user,sessionid){
   image(gameskin,width/2,height/2,width,height); //spacebg
   noTint();
   magicball();
-  
+
   //Retrieve Game status every 5 secs
-    xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function(){
-      if (this.readyState == 4 && this.status == 200) {
-        userArray = decode(this.responseText);
-        console.log(userArray);
-        loop();
-      }
-    }
-    xmlhttp.open("GET","../serverfiles/getarray.php",true);
-    xmlhttp.send();
-    noLoop();
-  // for (var i = 0; i<=10; i++){
-  //   userArray[i] = [];
-  //   for (var j = 0; j<=8; j++){
-  //     userArray[i][j] = 0;
-  //   }
-  // }
-  
-  //opponentArray = //get opponent array
-    //chat = //get Chat
-    
- 
-  
-  
-  
+  setInterval(refreshGameData(),5000);
   //cockpit
   image(cockpit,width/2,height/2,width,height);
 
@@ -47,14 +23,14 @@ function gameplay(user,sessionid){
       triangle(0,0,0,height*.07,20,height*.07);
       pop();
       pop();
-      
+
       //Special Weapons List
       push();
       translate(width*.28,height*.89);
       fill(0,0,10);
       quad(-width*.069,-height*.079,width*.069,-height*.085,width*.069,height*.07,-width*.068,height*.083);
       pop();
-      
+
       //crest
       push();
       translate(width*.396,height*.875);
@@ -62,21 +38,21 @@ function gameplay(user,sessionid){
       rect(0,0,width*.0685,height*.145);
       image(crest,0,0,width*0.06,width*0.06);
       pop();
-      
+
       //Terminal
       push();
       translate(width*.715,height*.89);
       fill(0,0,10);
       quad(width*.069,height*.075,-width*.068,height*.074,-width*.069,-height*.08,width*.071,-height*.077);
       textAlign(CENTER);
-      
+
       if (frameCount%30 >= 5){fill(255,255,255);}
       textSize(width*.01);
       text("Messages",0,0);
       pop();
-      
-      
-      
+
+
+
        //Home Ship Display Array
   push()
   translate(width/2,height*.38);
@@ -98,10 +74,26 @@ function gameplay(user,sessionid){
      }
      }
   pop()
-  
-  
-  //Place menu over game
- // menu();
+
+
+  Place menu over game
+  menu();
+}
+
+
+
+function refreshGameData(){
+  xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function(){
+    if (this.readyState == 4 && this.status == 200) {
+      userArray = decode(this.responseText);
+      console.log(userArray);
+      loop();
+    }
+  }
+  xmlhttp.open("GET","../serverfiles/getarray.php",true);
+  xmlhttp.send();
+  if (userArray == undefined){noLoop();}
 }
 
 function decode(string){
@@ -109,7 +101,6 @@ function decode(string){
     for (var i = 0; i<=10; i++){
       array[i]=[]
     for (var j = 0; j<=8; j++){
-      //string = '0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0'
       array[i][j] = string.charAt(((i*18)+(j*2)));
     }
   }

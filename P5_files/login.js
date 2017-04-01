@@ -57,7 +57,7 @@ function authenticate(){
           $(".username").remove();
           $(".password").remove();
           $(".button").remove();
-          player.downloadUserProfile();
+          player.updateUserProfile();
           gamestate = home;
         }
         else {console.log('LOGIN FAILED')}
