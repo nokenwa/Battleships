@@ -12,6 +12,7 @@ class User {
     this.draws = 0;
     this.opengames = [];
     this.closedgames = [];
+    this.friends = [];
   }
 
   //Download User Data Method, will only work if property connected is true
@@ -26,6 +27,7 @@ class User {
           user.wins = datadownload.wins;
           user.losses = datadownload.losses;
           user.draws = datadownload.draws;
+          user.friends = datadownload.friends;
           loop();
         }
       }
@@ -37,6 +39,7 @@ class User {
     this.wins = user.wins;
     this.losses = user.losses;
     this.draws = user.draws;
+    this.friends = user.friends;
   }
 
   //Methods for profile picture

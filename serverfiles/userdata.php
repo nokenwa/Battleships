@@ -37,7 +37,7 @@ while($reply = mysqli_fetch_assoc($request)){
 //Echo data as JSON Object
   echo '"'.$reply["username"].'",';
 };
-  echo '"COM"]}';
+  echo '"Face the AI"]}';
 
 
 exit;

@@ -24,10 +24,19 @@ function home() {
   text("My Friends",(width*.1)+250,height *.3);
   fill(0,0,0,200);
   stroke(255);
-  rect((width*.1)+250,height*.35,width*.5,height*.3);
+  rect((width*.1)+250,height*.35,width*.5,height*.5);
+
+  var playerbuttons = []
+  rectMode(CENTER);
+  textAlign(CENTER);
+  for (i = 0; i<player.friends.length; i++){
+    playerbuttons[i]= new button((width*.1)+255+(width*.25), (height*.35)+50+(i*60), player.friends[i],'offline','medium','play');
+    playerbuttons[i].createButton();
+  }
+
   pop();
 
   //Offline Mode
-  var playOffline = new button((width*.4), height*.8,"Play against AI", 'offline', 'medium', 'play');
-  playOffline.createButton();
+  //var playOffline = new button((width*.4), height*.8,"Play against AI", 'offline', 'medium', 'play');
+  // playOffline.createButton();
 }
