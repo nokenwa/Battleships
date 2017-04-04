@@ -15,7 +15,7 @@ $username = $_GET["user"];
       echo("Failed to connect. See error: " .  mysqli_connect_error());
     }
 
-//Query
+//Query for user data
 $query = "SELECT * FROM users WHERE username = '$username'";
 $request = mysqli_query($connection,$query);
 while($reply = mysqli_fetch_assoc($request)){
@@ -25,9 +25,20 @@ while($reply = mysqli_fetch_assoc($request)){
   echo '"username":"'.$reply["username"].'",';
   echo '"wins":"'.$reply["wins"].'",';
   echo '"losses":"'.$reply["losses"].'",';
-  echo '"draws":"'.$reply["draws"].'"}';
+  echo '"draws":"'.$reply["draws"].'","friends":[';
 
 };
+
+//Query for friends list
+$query = "SELECT username FROM users WHERE username != '$username'";
+$request = mysqli_query($connection,$query);
+while($reply = mysqli_fetch_assoc($request)){
+
+//Echo data as JSON Object
+  echo '"'.$reply["username"].'",';
+};
+  echo '"COM"]}';
+
 
 exit;
 ?>
