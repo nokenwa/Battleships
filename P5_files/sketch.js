@@ -9,7 +9,7 @@ var gameskin, cockpit,radar,crest;
 var userArray;
 
 function setup() {
-  createCanvas(displayWidth,displayHeight*.94);
+  createCanvas(displayWidth,displayHeight);
   magicballsetup(width,height);
   imageMode(CENTER);
   rectMode(CENTER);

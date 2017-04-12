@@ -21,7 +21,7 @@ function home() {
   textAlign(LEFT);
   rectMode(CORNER);
   textSize(32);
-  text("My Friends",(width*.1)+250,height *.3);
+  text("Online Friends",(width*.1)+250,height *.3);
   fill(0,0,0,200);
   stroke(255);
   rect((width*.1)+250,height*.35,width*.5,height*.5);
@@ -30,10 +30,9 @@ function home() {
   rectMode(CENTER);
   textAlign(CENTER);
   for (i = 0; i<player.friends.length; i++){
-    playerbuttons[i]= new button((width*.1)+255+(width*.25), (height*.35)+50+(i*60), player.friends[i],'offline','medium','play');
+    playerbuttons[i]= new button((width*.1)+300, (height*.35)+25+(i*30), player.friends[i],'offline','small','play');
     playerbuttons[i].createButton();
   }
-
   pop();
 
   //Offline Mode
