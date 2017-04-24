@@ -2,11 +2,12 @@
 var gamestate = openingScreen;
 var assetpaths = [];
 var assets = [];
-var player = new User();
-var loginrequest = {username:'username',password:'password'};
-var dom;
+var player = new User(); // Hold Player INFO
+var loginrequest = {username:'username',password:'password'}
+var dom; //Hold Interactions with HTML DOM Window
 var gameskin, cockpit,radar,crest;
 var userArray;
+var game;
 
 function setup() {
   createCanvas(displayWidth,displayHeight);
