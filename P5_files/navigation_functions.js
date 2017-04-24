@@ -66,14 +66,12 @@ function button(xCenter, yCenter, label, target, size, type) {
         this.clicknav();
       }else if (role == 'goto'){
         window.location.href = "form.html";
-      }else if (role == 'play'){
-        if(this.target == 'offline'){
-          console.log('begin game');
-          gamestate = gameplay;
+      }else if (role == 'viewprofile'){
+        this.target = new User(this.target,true)
+        gamestate=viewprofile(this.target)
         }
       }
     }
-  }
   this.clicknav = function() {;
     gamestate = this.target;
   }
