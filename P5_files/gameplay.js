@@ -5,11 +5,10 @@ function gameplay(user,sessionid){
   image(gameskin,width/2,height/2,width,height); //spacebg
   noTint();
   magicball();
-  onlinerefresh(); //Refresh Game data from database
+  if (frameCount%300 == 0){
+  refresh(); //Refresh Game data from database
+}
   drawUI(); //Draw User Interface
-
-  //Turn Based Game flow Conditionals
-  if (game.turn == setup){}
 
 }
 

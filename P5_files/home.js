@@ -30,7 +30,7 @@ function home() {
   rectMode(CENTER);
   textAlign(CENTER);
   for (i = 0; i<player.friends.length; i++){
-    playerbuttons[i]= new button((width*.1)+300, (height*.35)+25+(i*30), player.friends[i],player.friends[i],'small','viewprofile');
+    playerbuttons[i]= new button((width*.1)+300, (height*.35)+25+(i*30), player.friends[i],gameplay,'small','navigate');
     playerbuttons[i].createButton();
   }
   pop();

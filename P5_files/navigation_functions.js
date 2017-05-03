@@ -63,6 +63,9 @@ function button(xCenter, yCenter, label, target, size, type) {
   this.onclick = function(role) {
     if (mouseIsPressed) {
       if (role == 'navigate') {
+        if (this.target == gameplay){
+          refresh();
+        }
         this.clicknav();
       }else if (role == 'goto'){
         window.location.href = "form.html";
