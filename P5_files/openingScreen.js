@@ -1,15 +1,10 @@
 var particles = [];
-
 var magnet = new GravityPoint(screen.width/2, screen.height*.5,3.5, particles,10);
 
 function openingScreen(){
 
   angleMode(DEGREES);
-
-
   noStroke();
-
-  var spaceship = assets;
   background(0,0,0);
   magicball(true);
   image(spaceship,window.innerWidth/2,window.innerHeight/2,width*.1,width*.1);

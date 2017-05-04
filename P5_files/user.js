@@ -52,10 +52,4 @@ class User {
           imageMode(CORNER);
           image(this.profilePicObject,x,y,image_width,image_height);
         }
-
-
-
-
-
-
 }

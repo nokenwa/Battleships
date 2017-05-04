@@ -1,6 +1,5 @@
 //Variable Setup
-var gamestate = openingScreen;
-var assetpaths = [];
+var gamestate //used to determine which part of game is called
 var assets = [];
 var player = new User(); // Hold Player INFO
 var loginrequest = {username:'username',password:'password'}
@@ -15,7 +14,8 @@ function setup() {
   imageMode(CENTER);
   rectMode(CENTER);
   textAlign(CENTER);
-  assets = loader('assets/images/logospaceship.png');
+  gamestate = openingScreen;
+  spaceship = loadImage('assets/images/logospaceship.png');
   gameskin = loadImage('assets/images/spacebg.jpg');
   cockpit = loadImage('assets/images/battleship.png');
   radar = loadImage('assets/images/radarbg.jpg');
@@ -24,7 +24,7 @@ function setup() {
 }
 
 function draw() {
-    gamestate();
+  gamestate();
 }
 
 function mousePressed() {
@@ -37,8 +37,4 @@ function mousePressed() {
       gamestate = loginScreen;
     }
   }
-
-
-
-
 }

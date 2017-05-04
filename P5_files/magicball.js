@@ -17,7 +17,6 @@ function magicballsetup(canvaswidth,canvasheight){
   }
 }
 
-
 //GRAVITY POINTS
 var distancex, distancey, distanceh = 1, angle, x, y;
 var pullforce = {

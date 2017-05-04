@@ -35,7 +35,4 @@ function home() {
   }
   pop();
 
-  //Offline Mode
-  //var playOffline = new button((width*.4), height*.8,"Play against AI", 'offline', 'medium', 'play');
-  // playOffline.createButton();
 }

@@ -1,15 +1,17 @@
 function gameplay(user,sessionid){
+
+
+  if (frameCount%300 == 0){
+                            refresh(); //Refresh Game data from database every 5 de
+                          }
+  //DRAW USER INTERFACE
   imageMode(CENTER);
   background(0,0,0);
   tint(255,255,255,113);
   image(gameskin,width/2,height/2,width,height); //spacebg
   noTint();
   magicball();
-  if (frameCount%300 == 0){
-  refresh(); //Refresh Game data from database
-}
-  drawUI(); //Draw User Interface
-
+  drawUI();
 }
 
 function drawUI(){
@@ -85,8 +87,6 @@ function drawUI(){
 
 
 function refresh(){
-
-
   //Retrieve Game status every 5 secs
   if (userArray !== 'undefined'){
     //Retrieve Game status every 5 secs
@@ -101,7 +101,7 @@ function refresh(){
     xmlhttp.send();
     noLoop();
   }
-  //Backup if
+  //Backup if online refresh fails
   if (userArray == undefined){
     userArray=[];
     for (var i = 0; i<=10; i++){
